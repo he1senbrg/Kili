@@ -1,0 +1,6 @@
+run_id: fcp_v1
+rules: classic
+ppo: {num_envs: 256, rollout_len: 128}
+fcp_partners: 8
+fcp_partner_updates: 300
+fcp_updates: 600

@@ -1,0 +1,6 @@
+rules: classic
+episodes_per_pair: 64
+agents:
+  - scripted:easy
+  - scripted:medium
+  - scripted:hard

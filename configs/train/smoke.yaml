@@ -1,0 +1,11 @@
+# Tiny configuration used by CI and the quick-start (a few updates on a small field).
+run_id: smoke
+rules: classic
+ppo: {num_envs: 8, rollout_len: 16, epochs: 1, minibatches: 2, total_updates: 6}
+net: {d_model: 16, layers: 1, heads: 2, hidden: 32, gru: true}
+eval_episodes: 4
+log_every: 1
+ckpt_every: 3
+stages:
+  - {name: tiny_a, env: {n_crossers: 1, r_tag: 0.0, innings_s: 8.0}, updates: 3}
+  - {name: tiny_b, env: {n_crossers: 2, innings_s: 8.0}, updates: 3}

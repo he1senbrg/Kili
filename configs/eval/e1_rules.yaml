@@ -1,0 +1,6 @@
+# E1 RQ1 rule depth: leagues for Classic, Classic+Pk, Plus (reduced budget)
+experiment: e1_rules
+rules: classic
+seeds: [0, 1, 2]
+variants: [classic, classic_p1, classic_p2, classic_p3, classic_p4, classic_p6, plus, plus_all]
+league: {league_phases: 20, phase_updates: 25}

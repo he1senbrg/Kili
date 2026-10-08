@@ -1,0 +1,7 @@
+# Train the defence against scripted crossers (mirror of the attack curriculum).
+run_id: defence_curriculum_v1
+rules: classic
+ppo: {num_envs: 256, rollout_len: 128, total_updates: 800}
+stages:
+  - {name: d0_vs_easy,   env: {}, attack: "scripted:crosser?aggression=0.7", defence: learn, updates: 300}
+  - {name: d1_vs_medium, env: {}, attack: "scripted:crosser?aggression=1.0", defence: learn, updates: 500}

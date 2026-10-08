@@ -1,0 +1,19 @@
+# Convenience install: pip install -r requirements.txt && pip install -e packages/kilithattu-core -e packages/kilithattu-agents -e packages/kilithattu-train -e packages/kilithattu-eval -e packages/kilithattu-game
+# (or use uv: `uv sync`, see pyproject.toml). For GPU: pip install "jax[cuda12]".
+jax>=0.4.30
+flax>=0.8
+optax>=0.2
+chex
+numpy
+scipy
+pyyaml
+omegaconf
+optuna
+pandas
+matplotlib
+huggingface_hub
+pygame-ce
+orbax-checkpoint
+pytest>=8
+hypothesis>=6
+ruff

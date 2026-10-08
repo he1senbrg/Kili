@@ -1,0 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kilithattu-agents"
+version = "0.1.0"
+description = "Networks, scripted bots, checkpoints and the difficulty ladder"
+requires-python = ">=3.11"
+dependencies = ["kilithattu-core", "flax", "orbax-checkpoint", "huggingface_hub", "numpy"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kilithattu_agents"]

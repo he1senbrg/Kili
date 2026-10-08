@@ -1,0 +1,37 @@
+[importlinter]
+root_packages =
+    kilithattu_core
+    kilithattu_agents
+    kilithattu_train
+    kilithattu_eval
+    kilithattu_game
+
+[importlinter:contract:core-isolation]
+name = Core package must not depend on any outer packages
+type = forbidden
+source_modules =
+    kilithattu_core
+forbidden_modules =
+    kilithattu_agents
+    kilithattu_train
+    kilithattu_eval
+    kilithattu_game
+
+[importlinter:contract:agents-isolation]
+name = Agents package must not depend on train, eval, or game
+type = forbidden
+source_modules =
+    kilithattu_agents
+forbidden_modules =
+    kilithattu_train
+    kilithattu_eval
+    kilithattu_game
+
+[importlinter:contract:game-isolation]
+name = Game package must not depend on train or eval
+type = forbidden
+source_modules =
+    kilithattu_game
+forbidden_modules =
+    kilithattu_train
+    kilithattu_eval

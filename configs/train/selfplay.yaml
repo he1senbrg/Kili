@@ -1,0 +1,4 @@
+run_id: selfplay_naive
+rules: classic
+side: both
+ppo: {num_envs: 256, rollout_len: 128, total_updates: 3000}

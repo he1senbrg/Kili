@@ -1,0 +1,6 @@
+# E7 emergent tactics: detectors across league generations
+experiment: e7_tactics
+rules: classic
+seeds: [0, 1, 2]
+detectors: [pincers, decoys, mirroring_error, fouls]
+snapshots: every_4_phases

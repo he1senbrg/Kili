@@ -1,0 +1,10 @@
+# Kilithattu+: P1 momentum and stamina, P2 facing and turning, P4 strategic clap.
+# P3 (vision) and P6 (calls) are enabled by training stages or variants, P5 by field sampling.
+n_lanes: 2
+n_rows: 5
+n_crossers: 4
+p1_momentum: true
+p2_facing: true
+p3_vision: false
+p4_clap: true
+p6_calls: false

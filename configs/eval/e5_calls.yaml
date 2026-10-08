@@ -1,0 +1,5 @@
+# E5 RQ5 team calls: P6 on / off / scrambled
+experiment: e5_calls
+rules: classic
+seeds: [0, 1, 2]
+conditions: [calls_off, calls_on, calls_scrambled]

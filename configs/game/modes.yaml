@@ -1,0 +1,6 @@
+modes:
+  quick_innings: {rules: classic, innings: 1, side: attack, difficulty: medium}
+  play_defence:  {rules: classic, innings: 1, side: guard,  difficulty: medium}
+  play_kili:     {rules: classic, innings: 1, side: kili,   difficulty: medium}
+  plus:          {rules: plus,    innings: 1, side: attack, difficulty: medium}
+  watch_bots:    {rules: classic, innings: 1, side: watch,  difficulty: hard}

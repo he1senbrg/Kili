@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kilithattu-game"
+version = "0.1.0"
+description = "Playable Kilithattu Kali: pygame client with human, scripted and RL controllers"
+requires-python = ">=3.11"
+dependencies = ["kilithattu-agents", "kilithattu-core", "pygame-ce"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kilithattu_game"]
+
+[project.scripts]
+kilithattu = "kilithattu_game.app:main"

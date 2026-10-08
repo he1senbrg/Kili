@@ -1,0 +1,6 @@
+# Everything on: P1-P4 and P6 (P5 via field sampling, P7 via the human-fair wrapper).
+p1_momentum: true
+p2_facing: true
+p3_vision: true
+p4_clap: true
+p6_calls: true

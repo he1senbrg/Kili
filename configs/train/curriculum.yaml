@@ -1,0 +1,14 @@
+# Curriculum for the attack (PLAN.md 6.4). Parameters carry over between stages.
+run_id: curriculum_v1
+seed: 0
+rules: classic
+ppo: {num_envs: 256, rollout_len: 128, epochs: 4, minibatches: 4, lr: 3.0e-4, total_updates: 1900}
+net: {d_model: 64, layers: 2, heads: 4, hidden: 128, gru: true}
+log_every: 10
+ckpt_every: 100
+eval_episodes: 64
+stages:
+  - {name: s0_cross_empty,        env: {n_crossers: 1, r_tag: 0.0, innings_s: 24.0}, defence: "scripted:guard?reaction=0.1",  updates: 300, promote_points: 12.0}
+  - {name: s1_one_vs_slow_guards, env: {n_crossers: 1, innings_s: 40.0},            defence: "scripted:guard?reaction=0.15", updates: 300, promote_points: 8.0}
+  - {name: s2_two_vs_scripted,    env: {n_crossers: 2, innings_s: 60.0},            defence: "scripted:guard?reaction=0.3",  updates: 400, promote_points: 8.0}
+  - {name: s3_full_vs_scripted,   env: {},                                          defence: "scripted:guard?reaction=0.4",  updates: 600, promote_points: 12.0}

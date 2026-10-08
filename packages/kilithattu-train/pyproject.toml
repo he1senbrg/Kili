@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kilithattu-train"
+version = "0.1.0"
+description = "MAPPO, curriculum, self-play league, FCP partners, behaviour cloning"
+requires-python = ">=3.11"
+dependencies = ["kilithattu-agents", "kilithattu-core", "optax", "omegaconf", "wandb"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kilithattu_train"]
+
+[project.scripts]
+kilithattu-train = "kilithattu_train.cli:main"

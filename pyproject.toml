@@ -1,0 +1,45 @@
+[project]
+name = "kilithattu-workspace"
+version = "0.1.0"
+description = "Kilithattu-RL: multi-agent RL and a playable game for Kilithattu Kali"
+requires-python = ">=3.11"
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+cuda = ["jax[cuda12]"]
+
+[dependency-groups]
+dev = ["pytest>=8", "hypothesis>=6", "ruff>=0.5", "pyright>=1.1.370", "import-linter>=2.0", "pre-commit>=3.7"]
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[tool.uv.sources]
+kilithattu-core = { workspace = true }
+kilithattu-agents = { workspace = true }
+kilithattu-train = { workspace = true }
+kilithattu-eval = { workspace = true }
+kilithattu-game = { workspace = true }
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E741", "E501", "B905"]
+
+[tool.pytest.ini_options]
+testpaths = ["packages"]
+addopts = "-q"
+markers = ["nightly: slow tests run only in the nightly workflow"]
+
+[tool.pyright]
+include = ["packages"]
+typeCheckingMode = "basic"
+reportMissingImports = false
+reportMissingModuleSource = false
+reportAttributeAccessIssue = false

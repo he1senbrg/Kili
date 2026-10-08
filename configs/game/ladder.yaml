@@ -1,0 +1,16 @@
+# Difficulty ladder for the game. Each level maps an opponent/teammate name to a policy per side.
+# Entries are either scripted refs, local checkpoint folders ("path"), or Hugging Face Hub checkpoints
+# ("revision" + "subdir" under hub_repo). Replace the scripted entries with trained checkpoints once available:
+#   attack:  {path: runs/my_run/attack/latest}
+#   defence: {path: runs/my_run/defence/latest}
+hub_repo: your-org/kilithattu-rl-checkpoints
+levels:
+  easy:
+    main:     {attack: {scripted: "scripted:crosser?aggression=0.7"},  defence: {scripted: "scripted:guard?reaction=0.15"}}
+    teammate: {attack: {scripted: "scripted:crosser?aggression=0.8"},  defence: {scripted: "scripted:guard?reaction=0.2"}}
+  medium:
+    main:     {attack: {scripted: "scripted:crosser?aggression=1.0"},  defence: {scripted: "scripted:guard?reaction=0.4"}}
+    teammate: {attack: {scripted: "scripted:crosser?aggression=1.0"},  defence: {scripted: "scripted:guard?reaction=0.4"}}
+  hard:
+    main:     {attack: {scripted: "scripted:crosser?aggression=1.25"}, defence: {scripted: "scripted:guard?reaction=0.6&anticipation=0.2"}}
+    teammate: {attack: {scripted: "scripted:crosser?aggression=1.2"},  defence: {scripted: "scripted:guard?reaction=0.55"}}

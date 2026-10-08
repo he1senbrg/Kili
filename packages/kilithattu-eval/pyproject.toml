@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kilithattu-eval"
+version = "0.1.0"
+description = "Matches, ratings, exploitability, balance search and experiment tooling"
+requires-python = ">=3.11"
+dependencies = ["kilithattu-train", "kilithattu-agents", "kilithattu-core", "optuna", "pandas", "matplotlib", "scipy"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kilithattu_eval"]
+
+[project.scripts]
+kilithattu-eval = "kilithattu_eval.cli:main"

@@ -1,0 +1,10 @@
+run_id: league_v1
+rules: classic
+ppo: {num_envs: 256, rollout_len: 128, epochs: 4, minibatches: 4, total_updates: 4000}
+league_phases: 80
+phase_updates: 25
+snapshot_every: 4
+pfsp_power: 2.0
+win_points: 18.0
+exploiter_updates: 150
+eval_episodes: 64

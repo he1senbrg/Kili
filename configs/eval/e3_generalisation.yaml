@@ -1,0 +1,7 @@
+# E3 RQ3 held-out fields and team sizes
+experiment: e3_generalisation
+rules: classic
+seeds: [0, 1, 2]
+train_fields: [[2,5],[2,7],[3,5]]
+test_fields: [[2,6],[3,7],[2,9],[3,9]]
+crossers: [3, 5, 6]

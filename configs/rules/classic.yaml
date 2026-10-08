@@ -1,0 +1,20 @@
+# Classic rules (balance v1, see RULES.md section 9): v_guard 3.0, v_kili 3.6, r_tag 0.5 were swept with the
+# scripted bots so that scripted attack vs scripted defence is competitive. All Kilithattu+ toggles off.
+n_lanes: 2
+n_rows: 5
+n_crossers: 4
+lane_w: 3.0
+row_d: 3.0
+zone: 2.0
+dt: 0.05
+innings_s: 120.0
+clap_auto_s: 2.0
+r_tag: 0.5
+v_cross: 5.0
+v_guard: 3.0
+v_kili: 3.6
+p1_momentum: false
+p2_facing: false
+p3_vision: false
+p4_clap: false
+p6_calls: false

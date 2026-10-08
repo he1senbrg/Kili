@@ -1,0 +1,7 @@
+# E6 RQ6 FCP teammate vs self-play teammate (held-out partners, small human study)
+experiment: e6_human_teaming
+rules: classic
+seeds: [0, 1, 2]
+conditions: [fcp, selfplay_partner]
+heldout_partners: 4
+human_study: docs/human-study.md

@@ -1,0 +1,4 @@
+# Human-fair reflex settings used when a bot plays against a human (P7 wrapper parameters).
+easy:   {delay_range: [3, 5], interval_range: [2, 3], sticky_range: [0.05, 0.10]}
+medium: {delay_range: [1, 3], interval_range: [1, 2], sticky_range: [0.0, 0.05]}
+hard:   {delay_range: [0, 1], interval_range: [1, 1], sticky_range: [0.0, 0.0]}
